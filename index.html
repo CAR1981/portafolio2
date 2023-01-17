@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador o desencriptador de texto con Javascript</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+           <div class="Encriptar/Desencriptar">
+             <h1><img  class="logo" src="imagen/logo.png" alt="Logo de Carolina Sosa"></h1>
+             <p class="titulo">Encriptador o Desencriptador de mensajes</p>
+      
+            </div>
+
+        </header>
+
+        
+        <main>
+
+          <section class="contenido1">
+
+               <h6><img class="exclamacion" src="imagen/bi_exclamation-circle-fill.png"></h6>    
+               <p class="Texto-exclamacion">Sólo letras minúsculas y sin acentos</p>
+                    
+              <textarea  id="ingresetexto" value= "ingesetexto" class="input-texto"  placeholder="  ingrese el texto"></textarea>
+                        
+              <button type="button" name="button" onclick="encriptarTexto()" class="button-encriptar">Encriptar</button>
+
+              <button type="button" name="button" onclick="desencriptarTexto()" class="button-desencriptar">Desencriptar</button> 
+
+          </section>
+
+          <section class="contenido2">
+
+              <textarea  value= "ingesetexto2" id="ingresetexto2" class="input-texto2" style = "line-height: 1em"></textarea >
+                          
+              <button class="button-copiar" type="button" name="button" onclick = "copiarTexto()"  id="copiar" type="button" name="button" >Copiar</button>
+
+          </section >
+
+          <section class="Javascript">
+
+                 <script >
+              
+                          // let texto=document.querySelector(".texto");  
+                             var texto="";
+                          // funcion para el primer boton de encripar texto
+
+                              function encriptarTexto(){
+
+                               
+                                var texto = document.getElementById("ingresetexto").value.toLowerCase();
+
+                               //i es para que afecte tanto para mayúsculas como para minúsculas
+                               // la g es para toda la linea
+                               // m es para que afecte a multiples lineas
+                               var nuevoTexto=texto.replace(/e/gim,"♫");
+                               var nuevoTexto=nuevoTexto.replace(/i/gim,"#Ὧ#");
+                               var nuevoTexto=nuevoTexto.replace(/o/gim,"&");
+                               var nuevoTexto=nuevoTexto.replace(/a/gim, "1ᴥ");
+                               var nuevoTexto=nuevoTexto.replace(/u/gim,"♣");
+                               var nuevoTexto=nuevoTexto.replace(/v/gim,"@");                               
+                               var nuevoTexto=nuevoTexto.replace(/c/gim,"5°");
+                               var nuevoTexto=nuevoTexto.replace(/d/gim,"☻");
+                               var nuevoTexto=nuevoTexto.replace(/y/gim,"6");                               
+                               var nuevoTexto=nuevoTexto.replace(/g/gim,"§");
+                               var nuevoTexto=nuevoTexto.replace(/h/gim,"4");
+                               var nuevoTexto=nuevoTexto.replace(/j/gim,"ԫ");
+                               var nuevoTexto=nuevoTexto.replace(/k/gim,"¥");
+                               var nuevoTexto=nuevoTexto.replace(/l/gim,"3");
+                               var nuevoTexto=nuevoTexto.replace(/m/gim,"¶");
+                               var nuevoTexto=nuevoTexto.replace(/n/gim,"£");
+                               var nuevoTexto=nuevoTexto.replace(/ñ/gim,"Ɣ");
+                               var nuevoTexto=nuevoTexto.replace(/p/gim,"_");
+                               var nuevoTexto=nuevoTexto.replace(/q/gim,"¢");
+                               var nuevoTexto=nuevoTexto.replace(/r/gim,"Ø");
+                               var nuevoTexto=nuevoTexto.replace(/s/gim,"Ʃ");
+                               var nuevoTexto=nuevoTexto.replace(/t/gim,"µ");
+                               var nuevoTexto=nuevoTexto.replace(/b/gim,"½");
+                               var nuevoTexto=nuevoTexto.replace(/w/gim,"ɷ");
+                               var nuevoTexto=nuevoTexto.replace(/x/gim,"Ж");
+                               var nuevoTexto=nuevoTexto.replace(/f/gim,"҉");
+                               var nuevoTexto=nuevoTexto.replace(/z/gim,"۩");
+
+                                 
+                                 document.getElementById("ingresetexto2").innerHTML=nuevoTexto;
+
+                                 document.getElementById("copiar").style.display= "show";
+                                 document.getElementById("copiar").style.display= "inherit";
+
+                                 alert("¡Se ha encriptado el texto ingresado!");
+
+                               }  
+
+                               // funcion para el primer boton de desencripar texto
+                                function desencriptarTexto(){
+
+                               
+                                        var texto = document.getElementById("ingresetexto").value.toLowerCase();
+
+                                       //i es para que afecte tanto para mayúsculas como para minúsculas
+                                       // la g es para toda la linea
+                                       // m es para que afecte a multiples lineas
+                                       var nuevoTexto=texto.replace(/♫/gim,"e");
+                                       var nuevoTexto=nuevoTexto.replace(/#Ὧ#/gim,"i");
+                                       var nuevoTexto=nuevoTexto.replace(/&/gim,"o");
+                                       var nuevoTexto=nuevoTexto.replace(/1ᴥ/gim, "a");
+                                       var nuevoTexto=nuevoTexto.replace(/♣/gim,"u");
+                                       var nuevoTexto=nuevoTexto.replace(/@/gim,"v");                               
+                                       var nuevoTexto=nuevoTexto.replace(/5°/gim,"c");
+                                       var nuevoTexto=nuevoTexto.replace(/☻/gim,"d");
+                                       var nuevoTexto=nuevoTexto.replace(/6/gim,"y");                               
+                                       var nuevoTexto=nuevoTexto.replace(/§/gim,"g");
+                                       var nuevoTexto=nuevoTexto.replace(/4/gim,"h");
+                                       var nuevoTexto=nuevoTexto.replace(/ԫ/gim,"j");
+                                       var nuevoTexto=nuevoTexto.replace(/¥/gim,"k");
+                                       var nuevoTexto=nuevoTexto.replace(/3/gim,"l");
+                                       var nuevoTexto=nuevoTexto.replace(/¶/gim,"m");
+                                       var nuevoTexto=nuevoTexto.replace(/£/gim,"n");
+                                       var nuevoTexto=nuevoTexto.replace(/Ɣ/gim,"ñ");
+                                       var nuevoTexto=nuevoTexto.replace(/_/gim,"p");
+                                       var nuevoTexto=nuevoTexto.replace(/¢/gim,"q");
+                                       var nuevoTexto=nuevoTexto.replace(/Ø/gim,"r");
+                                       var nuevoTexto=nuevoTexto.replace(/Ʃ/gim,"s");
+                                       var nuevoTexto=nuevoTexto.replace(/µ/gim,"t");
+                                       var nuevoTexto=nuevoTexto.replace(/½/gim,"b");
+                                       var nuevoTexto=nuevoTexto.replace(/ɷ/gim,"w");
+                                       var nuevoTexto=nuevoTexto.replace(/Ж/gim,"x");
+                                       var nuevoTexto=nuevoTexto.replace(/҉/gim,"f");
+                                       var nuevoTexto=nuevoTexto.replace(/۩/gim,"z");
+                                                         
+                                         document.getElementById("ingresetexto2").innerHTML=nuevoTexto;
+
+                                         document.getElementById("copiar").style.display= "show";
+                                         document.getElementById("copiar").style.display= "inherit";
+
+                                         alert("¡Se ha desencriptado el texto ingresado!");
+
+                               }  
+
+
+                               
+                             function copiarTexto(){
+
+                                  var contenido = document.querySelector("copiar")
+                                 
+                                   
+                                    ingresetexto2.select();
+                                       
+                                
+                                  document.execCommand("cut");
+                                   // Vuelve a cargar la página actual sin la caché del navegador
+                                  location.reload();
+                                  alert("¡Se copio!");
+
+                               }
+
+                               
+
+                         </script>
+            
+
+
+          </section>
+           
+               
+               
+        </main>
+        
+                
+         <footer>
+
+           <p class="copyright">&copy Autor Sosa Carolina Inés - Principiante en programación - 2023</p>
+          
+        </footer>
+
+    </body>
+
+</html>
